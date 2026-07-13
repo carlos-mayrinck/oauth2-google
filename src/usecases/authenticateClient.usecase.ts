@@ -26,6 +26,7 @@ export class AuthenticateClientUsecase {
       const authorizationUrl = this.client.generateAuthUrl({
         scope,
         include_granted_scopes: true,
+        // prompt: 'consent',
         response_type: 'code',
         access_type: 'offline',
       });
